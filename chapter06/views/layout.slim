@@ -1,0 +1,22 @@
+doctype html
+html lang="en"
+  head
+    title== @title
+    meta charset="utf-8"
+    == css :styles
+    link href="http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css" media="screen, projection" rel="stylesheet"
+    script src="http://code.jquery.com/jquery-1.8.2.min.js"
+    script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"
+    script src="/javascripts/application.js"
+  body
+    header
+      h1 Songs By Sinatra
+      == slim :nav
+    section
+      == styled_flash
+      == yield
+    footer
+      - if authorized?
+        a href="/logout" log out
+      - else
+        a href="/login" log in 

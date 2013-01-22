@@ -1,0 +1,6 @@
+- if @song.likes == 0
+  p Nobody has liked this song so far!
+- if @song.likes == 1
+  p This song has been liked once
+- if @song.likes > 1
+  p This song has been liked #{@song.likes} times

@@ -1,0 +1,8 @@
+h1 Songs
+a href="/songs/new" Create a new song
+- if @songs.any?
+  ul#songs
+    -@songs.each do |song|
+      li <a href="/songs/#{song.id}">#{song.title}</a>
+- else
+  p No songs have been created yet!

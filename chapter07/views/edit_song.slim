@@ -1,0 +1,4 @@
+h1 Edit Song
+form method="POST" action="/songs/#{@song.id}"
+  input type="hidden" name="_method" value="PUT"
+  == slim :song_form
